@@ -8,7 +8,7 @@ credentials = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"]
 )
 client = bigquery.Client(credentials=credentials)
-
+st.write("Hello, world!")
 # Perform query.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 @st.cache(ttl=600)
